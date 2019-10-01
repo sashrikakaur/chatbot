@@ -27,6 +27,7 @@ class EchoBot extends ActivityHandler {
                     break;
                 case "I feel like going out for a drink" :
                     await context.sendActivity(`I think there is a lot going on right now with you. Why don't we talk about it?`);
+                    break;
                 default : await context.sendActivity(`I see. So how do you feel now?`);
             }
 
