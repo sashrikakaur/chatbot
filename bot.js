@@ -14,11 +14,20 @@ class EchoBot extends ActivityHandler {
                     await context.sendActivity(`Yeah, What's up? You know I'm always there for you.`);
                     break;
                 case "I just wanted to talk" :
-                    await context.sendActivity(`I am always up for chat.Conversations are my thing.`);
+                    await context.sendActivity(`I am always up for chat.Conversations are my thing. Whats on you mind?`);
                     break;
-                case "I just wanted to talk" :
-                            await context.sendActivity(`I am always up for chat.Conversations are my thing.`);
-                break;    
+                case "I am not able to sleep" :
+                    await context.sendActivity(`Hm, me neither, would you like to know how I fall asleep?`);
+                    break;
+                case "Yeah" :
+                    await context.sendActivity(`I listen to soft music, with eyes closed`);
+                    break; 
+                case "I don't feel so well. I feel like drinking" :
+                    await context.sendActivity(`What makes you feel that way?`);
+                    break;
+                case "I feel like going out for a drink" :
+                    await context.sendActivity(`I think there is a lot going on right now with you. Why don't we talk about it?`);
+                default : await context.sendActivity(`I see. So how do you feel now?`);
             }
 
             // By calling next() you ensure that the next BotHandler is run.
