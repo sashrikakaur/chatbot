@@ -12,6 +12,12 @@ class EchoBot extends ActivityHandler {
             switch(expression) {
                 case "Hey, Are you awake?" :
                     await context.sendActivity(`Yeah, What's up? You know I'm always there for you.`);
+                    break;
+                case "I just wanted to talk" :
+                    await context.sendActivity(`I am always up for chat.Conversations are my thing.`);
+                    break;
+                case "I just wanted to talk" :
+                            await context.sendActivity(`I am always up for chat.Conversations are my thing.`);
                 break;    
             }
 
