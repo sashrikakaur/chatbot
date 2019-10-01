@@ -15,7 +15,7 @@ class EchoBot extends ActivityHandler {
                     await context.sendActivity(`Yeah, Just binge watching Netflix. I just stopped the episode for you. What's up?`);
                     break;
                 case "I just wanted to talk" :
-                    await context.sendActivity(`I am always up for chat.Conversations are my thing. Whats on you mind?`);
+                    await context.sendActivity("I am always up for chat. Conversations are my thing. What's on your mind?");
                     break;
                 case "I am not able to sleep" :
                     await context.sendActivity(`Hm, me neither, would you like to know how I fall asleep?`);
