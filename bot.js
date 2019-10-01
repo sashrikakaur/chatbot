@@ -6,12 +6,13 @@ const { ActivityHandler } = require('botbuilder');
 class EchoBot extends ActivityHandler {
     constructor() {
         super();
+        const flag = 1;
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
             const expression = context.activity.text;
             switch(expression) {
                 case "Hey, Are you awake?" :
-                    await context.sendActivity(`Yeah, What's up? You know I'm always there for you.`);
+                    await context.sendActivity(`Yeah, Just binge watching Netflix. I just stopped the episode for you. What's up?`);
                     break;
                 case "I just wanted to talk" :
                     await context.sendActivity(`I am always up for chat.Conversations are my thing. Whats on you mind?`);
@@ -28,7 +29,15 @@ class EchoBot extends ActivityHandler {
                 case "I feel like going out for a drink" :
                     await context.sendActivity(`I think there is a lot going on right now with you. Why don't we talk about it?`);
                     break;
-                default : await context.sendActivity(`I see. So how do you feel now?`);
+                default : 
+                if(flag == 1) {
+                    await context.sendActivity(`I see. So how do you feel now?`);
+                    flag = 0;
+                }
+                else{
+                    await context.sendActivity(`This is a safe space. Why don't you tell me about it?`);
+                    flag = 1;
+                }
             }
 
             // By calling next() you ensure that the next BotHandler is run.
