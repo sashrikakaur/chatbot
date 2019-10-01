@@ -30,14 +30,7 @@ class EchoBot extends ActivityHandler {
                     await context.sendActivity(`I think there is a lot going on right now with you. Why don't we talk about it?`);
                     break;
                 default : 
-                if(flag == 1) {
                     await context.sendActivity(`I see. So how do you feel now?`);
-                    flag = 0;
-                }
-                else{
-                    await context.sendActivity(`This is a safe space. Why don't you tell me about it?`);
-                    flag = 1;
-                }
             }
 
             // By calling next() you ensure that the next BotHandler is run.
