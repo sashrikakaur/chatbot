@@ -11,7 +11,7 @@ class EchoBot extends ActivityHandler {
         this.onMessage(async (context, next) => {
             const expression = context.activity.text;
             switch(expression) {
-                case "Hey, Are you awake?" :
+                case "Hey, Are you awake?" , " hey, are you awake ?" :
                     await context.sendActivity(`Yeah, Just binge watching Netflix. I just stopped the episode for you. What's up?`);
                     break;
                 case "I just wanted to talk" :
