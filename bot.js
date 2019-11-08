@@ -11,14 +11,14 @@ class EchoBot extends ActivityHandler {
         this.onMessage(async (context, next) => {
             const expression = context.activity.text;
             switch(expression) {
-                case "Hey, Are you awake?" :
+                case "Hey, Are you awake?" , " hey, are you awake ?" :
                     await context.sendActivity(`Yeah, Just binge watching Netflix. I just stopped the episode for you. What's up?`);
                     break;
                 case "I just wanted to talk" :
                     await context.sendActivity("I am always up for chat. Conversations are my thing. What's on your mind?");
                     break;
                 case "I am not able to sleep" :
-                    await context.sendActivity(`Hm, me neither, would you like to know how I fall asleep?`);
+                    await context.sendActivity(`Hmmm, me neither, would you like to know how I fall asleep?`);
                     break;
                 case "Yeah" :
                     await context.sendActivity(`I listen to soft music, with eyes closed`);
